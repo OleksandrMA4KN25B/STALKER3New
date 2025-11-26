@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <nav class="nav" aria-label="Головне меню">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про гру</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="events.html">Івенти</a></li>
+        <li><a href="play.html" class="active">Гра</a></li>
+      </ul>
+    </nav>
+  </header>
+    <meta charset="utf-8" />
+    <title>JS Анімації — STALKER Зона</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Стиль у стилі твого сайту */
+        body {
+            background: #0b0d13;
+            color: #e4e4e4;
+            font-family: "Share Tech Mono", monospace;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00eaff;
+            text-shadow: 0 0 20px #00eaff;
+        }
+
+        #arena {
+            width: 600px;
+            height: 350px;
+            margin: 40px auto;
+            border: 2px solid #00eaff55;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 25px #00eaff44;
+        }
+
+        .orb {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: radial-gradient(circle,#00eaff,#0066ff00);
+            position: absolute;
+            box-shadow: 0 0 20px #00eaff;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            margin: 10px;
+            background: #00cfff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: .25s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #17e5ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Аномальне поле</h1>
+    <p>Натисни кнопку, щоб створити аномалії всередині арени.</p>
+
+    <div id="arena"></div>
+
+    <button class="btn" onclick="spawnOrb()">Створити аномалію</button>
+    <button class="btn" onclick="clearOrbs()">Очистити</button>
+
+    <!-- ОКРЕМИЙ ФАЙЛ JAVASCRIPT -->
+    <script src="ghost.js"></script>
+    <script src="ghost.js"></script>
+
+
+</body>
+</html>
